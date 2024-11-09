@@ -15,7 +15,7 @@ export function Course({ iconName, iconTheme, title, progress, duration }) {
                 <span className="text-gray-500">{progress + "% complete"}</span>
                 <BsDot className="text-gray-500" />
                 <LiaClock className="text-gray-500" />
-                <span className="text-gray-500">{duration}{duration > 1 ? " Hours" : " Hour"} {"left"}</span>
+                <span className="text-gray-500">&nbsp;{duration}{duration > 1 ? " Hours" : " Hour"} {"left"}</span>
             </span>
             <ProgressBar percentage={progress} height={"9px"} />
 
