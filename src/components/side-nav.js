@@ -33,12 +33,12 @@ export default function SideBar() {
 
             <ul className="menu mb-auto">
                 <li className="menu-item my-3">
-                    <Link to="/" className="flex menu-link">
+                    <Link to="/" className="flex menu-link active">
                         <MenuItem iconName="LiaHomeSolid" title="Home" />
                     </Link>
                 </li>
                 <li className="menu-item my-3">
-                    <Link to="/bookmark" className="flex menu-link">
+                    <Link to="/bookmarks" className="flex menu-link">
                         <MenuItem iconName="LiaBookmarkSolid" title="Bookmarks" />
                     </Link>
                 </li>
@@ -87,7 +87,7 @@ export default function SideBar() {
 
             <ul className="menu">
                 <li className="menu-item my-3">
-                    <Link to="/setting" className="flex menu-link">
+                    <Link to="/settings" className="flex menu-link">
                         <MenuItem iconName="IoSettingsOutline" title="Settings" />
                     </Link>
                 </li>

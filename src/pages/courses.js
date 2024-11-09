@@ -1,7 +1,3 @@
-import Head from "../components/head";
-import { DisplayAreaWhite } from "../components/display-area";
-import { User } from "../components/users";
-import Image from '../images/woman-dp.png'
 import Recommendation from "../components/recommendation";
 import { Recommendations } from "../components/recommendations";
 import Theme from "../components/theme";
@@ -30,38 +26,32 @@ export function Course({ iconName, iconTheme, title, progress, duration }) {
 export default function Courses() {
     return (
         <>
-            <Head title={"Courses"} user={User} image={Image} />
-            <DisplayAreaWhite color="bg-white">
-                <section className="courses grid grid-cols-3 gap-x-6">
-                    <h3 className="text-xl font-semibold col-start-1 col-end-4 mb-4">Your Courses</h3>
-                    <Course iconName={"LiaHornbill"} iconTheme={"#39D0FB"} title={"Design Accessibility"} progress={25} duration={3} />
-                    <Course iconName={"LiaCubesSolid"} iconTheme={"#A27CFF"} title={"UX Research"} progress={70} duration={15} />
-                    <Course iconName={"LiaFigma"} iconTheme={"#FFBD4C"} title={"Design Terminology"} progress={100} duration={0} />
-                </section>
+            <section className="courses grid grid-cols-3 gap-x-6">
+                <h3 className="text-xl font-semibold col-start-1 col-end-4 mb-4">Your Courses</h3>
+                <Course iconName={"LiaHornbill"} iconTheme={"#39D0FB"} title={"Design Accessibility"} progress={25} duration={3} />
+                <Course iconName={"LiaCubesSolid"} iconTheme={"#A27CFF"} title={"UX Research"} progress={70} duration={15} />
+                <Course iconName={"LiaFigma"} iconTheme={"#FFBD4C"} title={"Design Terminology"} progress={100} duration={0} />
+            </section>
 
-                <section className="recommendations rounded-lg mt-3 mb-1">
-                    <div className="flex items-center justify-between">
-                        <span className="flex items-center gap-x-5">
+            <section className="recommendations rounded-lg mt-3 mb-1">
+                <div className="flex items-center justify-between">
+                    <span className="flex items-center gap-x-5">
 
-                            <span className="border flex gap-x-3 items-center rounded-lg text-gray-600 px-3 py-1">
-                                <LiaSlidersHSolid className="text-2xl" />
-                                Filters
-                            </span>
-                            <span className="text-lg font-bold">All Courses</span>
+                        <span className="border flex gap-x-3 items-center rounded-lg text-gray-600 px-3 py-1">
+                            <LiaSlidersHSolid className="text-2xl" />
+                            Filters
                         </span>
-                        <span className="border rounded-lg text-gray-600 px-3 py-1">Recommendation</span>
-                    </div>
+                        <span className="text-lg font-bold">All Courses</span>
+                    </span>
+                    <span className="border rounded-lg text-gray-600 px-3 py-1">Recommendation</span>
+                </div>
 
-                    <div className="grid grid-cols-3 gap-6  mb-4 mt-7">
-                        {Recommendations.map(recommendation => <>
-                            <Recommendation {...recommendation} />
-                        </>)}
-                    </div>
-
-
-                </section>
-
-            </DisplayAreaWhite>
+                <div className="grid grid-cols-3 gap-6  mb-4 mt-7">
+                    {Recommendations.map(recommendation => <>
+                        <Recommendation {...recommendation} />
+                    </>)}
+                </div>
+            </section>
         </>
     );
 }
